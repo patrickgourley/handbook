@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="http://handbook.vantage.sh/aws/services/fargate-pricing/">
+        <link rel="canonical" href="http://handbook.vantage.sh/aws/services/elb-pricing/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>Fargate Pricing | Vantage Cloud Cost Handbook - Cloud Cost Handbook</title>
+        <title>Elastic Load Balancer Pricing | Vantage Cloud Cost Handbook - Cloud Cost Handbook</title>
       
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fargate Pricing | Vantage Cloud Cost Handbook
+              Elastic Load Balancer Pricing | Vantage Cloud Cost Handbook
             
           </span>
         </div>
@@ -261,8 +261,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/credits/" class="md-nav__link">
-        Credits
+      <a href="../../concepts/budgets/" class="md-nav__link">
+        Budgets
       </a>
     </li>
   
@@ -273,8 +273,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/budgets/" class="md-nav__link">
-        Budgets
+      <a href="../../concepts/credits/" class="md-nav__link">
+        Credits
       </a>
     </li>
   
@@ -316,6 +316,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/tags/" class="md-nav__link">
+        Tags
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -328,16 +340,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       <label class="md-nav__link" for="__nav_4">
         AWS Services
@@ -437,67 +447,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Fargate
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Fargate
+    <li class="md-nav__item">
+      <a href="../ecs-and-fargate-pricing/" class="md-nav__link">
+        ECS & Fargate
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pricing-dimensions" class="md-nav__link">
-    Pricing Dimensions
-  </a>
-  
-    <nav class="md-nav" aria-label="Pricing Dimensions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fargate-vs-self-managed-ec2-on-ecs-or-eks" class="md-nav__link">
-    Fargate vs self-managed EC2 on ECS or EKS
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -591,18 +545,33 @@
     Pricing Dimensions
   </a>
   
-    <nav class="md-nav" aria-label="Pricing Dimensions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fargate-vs-self-managed-ec2-on-ecs-or-eks" class="md-nav__link">
-    Fargate vs self-managed EC2 on ECS or EKS
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-load-balancer" class="md-nav__link">
+    Application Load Balancer
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#network-load-balancer" class="md-nav__link">
+    Network Load Balancer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gateway-load-balancer" class="md-nav__link">
+    Gateway Load Balancer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classic-load-balancer" class="md-nav__link">
+    Classic Load Balancer
+  </a>
   
 </li>
       
@@ -619,19 +588,20 @@
               
                 
                 
-                  <h1>Fargate</h1>
+                  <h1>Elastic Load Balancer Pricing | Vantage Cloud Cost Handbook</h1>
                 
-                <p><a href="https://aws.amazon.com/fargate/pricing/">Fargate Pricing Page</a></p>
+                <p><a href="https://aws.amazon.com/elasticloadbalancing/pricing/">Amazon ELB Pricing Page</a></p>
 <h2 id="summary">Summary</h2>
-<p>Fargate is a serverless compute engine for containers that works with both Amazon Elastic Container Service (ECS) and Amazon Elastic Kubernetes Service (EKS). Fargate charges you for the vCPU and Memory for a ECS Task or EKS Pod. Alternatively you can run your own EC2 instances for either EKS or ECS on EC2 which can be significantly cheaper. </p>
+<p>Amazon Elastic Load Balancer (ELB) is an ...</p>
 <h2 id="pricing-dimensions">Pricing Dimensions</h2>
 <ul>
-<li><strong>vCPU Hours</strong>: When configuring a Fargate Task or EKS Pod you assign a certain amount vCPU and are charged a corresponding per-hour VCPU rate. </li>
-<li><strong>GB Memory Hours</strong>: When configuring a Fargate Task or EKS Pod you assign a certain amount GB of Memory and are charged a corresponding per-hour GB of Memory rate. </li>
+<li><strong>Load Balancer Hours</strong>:</li>
+<li><strong>Throughput</strong>:</li>
 </ul>
-<h3 id="fargate-vs-self-managed-ec2-on-ecs-or-eks">Fargate vs self-managed EC2 on ECS or EKS</h3>
-<p>Fargate charges a significant premium for managing the underlying nodes. Additionally, Fargate has varying degress of vCPU performance that differ depending on the Task. As a result, Fargate can have pitfalls relative to self-managed ECS or EKS on EC2 beyond just the additional costs. </p>
-<p>For a more in-depth article for seeing how Fargate is priced relative to self-managed EC2, please read the following blog post for <a href="https://www.vantage.sh/blog/fargate-pricing">understanding Fargate pricing</a>.</p>
+<h2 id="application-load-balancer">Application Load Balancer</h2>
+<h2 id="network-load-balancer">Network Load Balancer</h2>
+<h2 id="gateway-load-balancer">Gateway Load Balancer</h2>
+<h2 id="classic-load-balancer">Classic Load Balancer</h2>
                 
                   
                 
@@ -649,41 +619,6 @@
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../ebs-pricing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: EBS" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              EBS
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../lambda-pricing/" class="md-footer__link md-footer__link--next" aria-label="Next: Lambda" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Lambda
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

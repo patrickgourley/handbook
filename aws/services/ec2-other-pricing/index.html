@@ -261,8 +261,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/credits/" class="md-nav__link">
-        Credits
+      <a href="../../concepts/budgets/" class="md-nav__link">
+        Budgets
       </a>
     </li>
   
@@ -273,8 +273,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/budgets/" class="md-nav__link">
-        Budgets
+      <a href="../../concepts/credits/" class="md-nav__link">
+        Credits
       </a>
     </li>
   
@@ -311,6 +311,18 @@
     <li class="md-nav__item">
       <a href="../../concepts/reserved-instances/" class="md-nav__link">
         Reserved Instances
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/tags/" class="md-nav__link">
+        Tags
       </a>
     </li>
   
@@ -482,8 +494,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../fargate-pricing/" class="md-nav__link">
-        Fargate
+      <a href="../ecs-and-fargate-pricing/" class="md-nav__link">
+        ECS & Fargate
       </a>
     </li>
   
@@ -606,7 +618,6 @@
 </ul>
 <h2 id="stranded-resources">Stranded Resources</h2>
 <p>Unused or stranded EBS Volumes and IP Addresses can add up over time especially if these resources are created automatically as part of an autoscaling service where they're spun up but not down. You should consider occasionally auditing your unattached EBS Volumes and IP addresses to see if you can clean them up to save costs.</p>
-<p><a href="https://vantage.sh/">Vantage</a> will automatically profile your AWS account for stranded resources and inform you when there is an opportunity for potential savings. </p>
 <h2 id="what-are-t2t3t4g-cpu-credit-charges">What are t2/t3/T4g CPU credit charges?</h2>
 <p>T2, T3 and T4g instances have a concept of "Unlimited mode" whereby you are charged a per-vCPU hour for bursting into this CPU usage. If you are leveraging these EC2 Instance Types with <code>unlimited</code> mode enabled, you should consider keeping an eye on these costs. Depending on how much your costs trend here, you may want to consider "<a href="../../concepts/rightsizing/">rightsizing</a>" to a different instance type that is allocated additional CPU. </p>
                 

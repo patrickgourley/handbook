@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="http://handbook.vantage.sh/aws/services/ebs-pricing/">
+        <link rel="canonical" href="http://handbook.vantage.sh/aws/services/elasticsearch-pricing/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>EBS Pricing | Vantage Cloud Cost Handbook - Cloud Cost Handbook</title>
+        <title>Elasticsearch Service Pricing | Vantage Cloud Cost Handbook - Cloud Cost Handbook</title>
       
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EBS Pricing | Vantage Cloud Cost Handbook
+              Elasticsearch Service Pricing | Vantage Cloud Cost Handbook
             
           </span>
         </div>
@@ -340,16 +340,14 @@
 
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       <label class="md-nav__link" for="__nav_4">
         AWS Services
@@ -437,68 +435,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          EBS
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ebs-pricing/" class="md-nav__link">
         EBS
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pricing-dimensions" class="md-nav__link">
-    Pricing Dimensions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#volume-types" class="md-nav__link">
-    Volume Types
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stranded-volumes" class="md-nav__link">
-    Stranded Volumes
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -606,20 +547,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#volume-types" class="md-nav__link">
-    Volume Types
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stranded-volumes" class="md-nav__link">
-    Stranded Volumes
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -633,29 +560,20 @@
               
                 
                 
-                  <h1>EBS</h1>
+                  <h1>Elasticsearch Service Pricing | Vantage Cloud Cost Handbook</h1>
                 
-                <p><a href="https://aws.amazon.com/ebs/pricing/">Amazon EBS Pricing Page</a></p>
+                <p><a href="https://aws.amazon.com/elasticsearch-service/pricing/">Amazon Elasticsearch Service Pricing Page</a></p>
 <h2 id="summary">Summary</h2>
-<p>Amazon Elastic Block Storage (EBS) is amazon's block storage offering that allows you to create "Volumes" which is the base primitive of everything related to EBS. There are multiple EBS "Volume Types" that offer different capabilites and have their own set of pricing. EBS costs are factored into the cost category of "EC2-Other" on your AWS bill which can oftentimes complicate understanding where these costs are coming from. </p>
-<p>It is important to note that you are charged for the amount of <em>provisioned</em> storage not <em>utilized</em> storage. So, for example, if you create a 20GB EBS Volume and only utilize 1GB of it, you are still charged for all 20GB. </p>
+<p>Amazon Elasticsearch Service is an </p>
 <h2 id="pricing-dimensions">Pricing Dimensions</h2>
 <ul>
-<li><strong>Volume Storage Hours</strong>: When you create an EBS Volume you allocate a certain amount of storage to it. Ultimately the main cost of an EBS Volume is the result of the amount of hours you're using an EBS Volume and the size you allocate. </li>
-<li><strong>Volume Type</strong>: EBS has different types of Volume Types which are documented below. Each Volume Type has different rates. </li>
-<li><strong>Provisioned IOPS</strong>: Certain EBS Volume types (io2, io2) allow you to specific an amount of provisioned input/output operations per second which is abbreviated as IOPS and pronounced as "eye-ops". When using these volume types you are charged for the amount of provisioned iops even if you don't fully utilize them.</li>
-<li><strong>Amazon EBS Snapshots</strong>: Amazon EBS Snapshots are a point in time copy of your block volume data. EBS Snapshots are stored incrementally, which means you are billed only for the changed blocks stored.</li>
-<li><strong>EBS Snapshot API Requests</strong>: EBS charges you for the amount of API calls you make for snapshots. These are charged in increments of thousands of API requests. </li>
+<li>
+<p><strong>Compute</strong>: </p>
+</li>
+<li>
+<p><strong>Storage</strong>:</p>
+</li>
 </ul>
-<h2 id="volume-types">Volume Types</h2>
-<p>Amazon EBS offers a few diffrent Volume Types that have different pricing rates and functionality. Each EBS Volume Type is described below:</p>
-<ul>
-<li><strong> General Purpose SSD (gp2, gp3)</strong>: General Purpose SSD (gp3) volumes offer cost-effective storage that is ideal for a broad range of workloads.</li>
-<li><strong> Provisioned IOPS (io1, io2)</strong>: Provisioned IOPS SSD (io1 and io2) volumes are designed to meet the needs of I/O-intensive workloads, particularly database workloads, that are sensitive to storage performance and consistency. Provisioned IOPS SSD volumes use a consistent IOPS rate, which you specify when you create the volume, and Amazon EBS delivers the provisioned performance 99.9 percent of the time.</li>
-</ul>
-<h2 id="stranded-volumes">Stranded Volumes</h2>
-<p>Oftentimes, EBS Volumes are created in conjunction with other AWS resources such as EC2 instances but are de-coupled from the lifecycle of those other resources. One common pattern we see is that developers will create EC2 instances with EBS Volumes attached but when they delete the EC2 instance, they assume that the EBS Volume is destroyed accordingly. In larger-scale environments with autoscaling this problem can grow significantly as a part of an AWS bill.</p>
-<p>We recommend that you periodically profile for unattached or stranded EBS Volumes. </p>
                 
                   
                 
@@ -673,41 +591,6 @@
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../cloudfront-pricing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CloudFront" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              CloudFront
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../ecs-and-fargate-pricing/" class="md-footer__link md-footer__link--next" aria-label="Next: ECS &amp; Fargate" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              ECS & Fargate
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

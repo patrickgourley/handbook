@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="http://handbook.vantage.sh/aws/services/ebs-pricing/">
+        <link rel="canonical" href="http://handbook.vantage.sh/aws/services/ecs-and-fargate-pricing/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>EBS Pricing | Vantage Cloud Cost Handbook - Cloud Cost Handbook</title>
+        <title>ECS & Fargate Pricing | Vantage Cloud Cost Handbook - Cloud Cost Handbook</title>
       
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EBS Pricing | Vantage Cloud Cost Handbook
+              ECS & Fargate Pricing | Vantage Cloud Cost Handbook
             
           </span>
         </div>
@@ -437,6 +437,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../ebs-pricing/" class="md-nav__link">
+        EBS
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -447,12 +459,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          EBS
+          ECS & Fargate
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        EBS
+        ECS & Fargate
       </a>
       
         
@@ -475,23 +487,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pricing-dimensions" class="md-nav__link">
-    Pricing Dimensions
+  <a href="#fargate-pricing-dimensions" class="md-nav__link">
+    Fargate Pricing Dimensions
+  </a>
+  
+    <nav class="md-nav" aria-label="Fargate Pricing Dimensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fargate-vs-self-managed-ec2-on-ecs-or-eks" class="md-nav__link">
+    Fargate vs self-managed EC2 on ECS or EKS
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#volume-types" class="md-nav__link">
-    Volume Types
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stranded-volumes" class="md-nav__link">
-    Stranded Volumes
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -499,18 +510,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ecs-and-fargate-pricing/" class="md-nav__link">
-        ECS & Fargate
-      </a>
     </li>
   
 
@@ -600,23 +599,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pricing-dimensions" class="md-nav__link">
-    Pricing Dimensions
+  <a href="#fargate-pricing-dimensions" class="md-nav__link">
+    Fargate Pricing Dimensions
+  </a>
+  
+    <nav class="md-nav" aria-label="Fargate Pricing Dimensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fargate-vs-self-managed-ec2-on-ecs-or-eks" class="md-nav__link">
+    Fargate vs self-managed EC2 on ECS or EKS
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#volume-types" class="md-nav__link">
-    Volume Types
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stranded-volumes" class="md-nav__link">
-    Stranded Volumes
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -633,29 +631,23 @@
               
                 
                 
-                  <h1>EBS</h1>
+                  <h1>ECS & Fargate</h1>
                 
-                <p><a href="https://aws.amazon.com/ebs/pricing/">Amazon EBS Pricing Page</a></p>
+                <ul>
+<li><a href="https://aws.amazon.com/ecs/pricing/">ECS Pricing Page</a></li>
+<li><a href="https://aws.amazon.com/fargate/pricing/">Fargate Pricing Page</a></li>
+</ul>
 <h2 id="summary">Summary</h2>
-<p>Amazon Elastic Block Storage (EBS) is amazon's block storage offering that allows you to create "Volumes" which is the base primitive of everything related to EBS. There are multiple EBS "Volume Types" that offer different capabilites and have their own set of pricing. EBS costs are factored into the cost category of "EC2-Other" on your AWS bill which can oftentimes complicate understanding where these costs are coming from. </p>
-<p>It is important to note that you are charged for the amount of <em>provisioned</em> storage not <em>utilized</em> storage. So, for example, if you create a 20GB EBS Volume and only utilize 1GB of it, you are still charged for all 20GB. </p>
-<h2 id="pricing-dimensions">Pricing Dimensions</h2>
+<p>Elastic Container Service (ECS) allows you to run docker containers through a primitive named a "Task". Tasks ultimately run on EC2 instances which are either managed by you (ECS on EC2) or fully managed by AWS (Fargate).</p>
+<p>There is no additional charge to you when using ECS on self-managed EC2 as you're just paying for EC2 instances that you create and manage. Fargate charges you for the vCPU and Memory for a ECS Task or EKS Pod and you pay a premium for managing the underlying EC2 instances. </p>
+<h2 id="fargate-pricing-dimensions">Fargate Pricing Dimensions</h2>
 <ul>
-<li><strong>Volume Storage Hours</strong>: When you create an EBS Volume you allocate a certain amount of storage to it. Ultimately the main cost of an EBS Volume is the result of the amount of hours you're using an EBS Volume and the size you allocate. </li>
-<li><strong>Volume Type</strong>: EBS has different types of Volume Types which are documented below. Each Volume Type has different rates. </li>
-<li><strong>Provisioned IOPS</strong>: Certain EBS Volume types (io2, io2) allow you to specific an amount of provisioned input/output operations per second which is abbreviated as IOPS and pronounced as "eye-ops". When using these volume types you are charged for the amount of provisioned iops even if you don't fully utilize them.</li>
-<li><strong>Amazon EBS Snapshots</strong>: Amazon EBS Snapshots are a point in time copy of your block volume data. EBS Snapshots are stored incrementally, which means you are billed only for the changed blocks stored.</li>
-<li><strong>EBS Snapshot API Requests</strong>: EBS charges you for the amount of API calls you make for snapshots. These are charged in increments of thousands of API requests. </li>
+<li><strong>vCPU Hours</strong>: When configuring a Fargate Task or EKS Pod you assign a certain amount vCPU and are charged a corresponding per-hour VCPU rate. </li>
+<li><strong>GB Memory Hours</strong>: When configuring a Fargate Task or EKS Pod you assign a certain amount GB of Memory and are charged a corresponding per-hour GB of Memory rate. </li>
 </ul>
-<h2 id="volume-types">Volume Types</h2>
-<p>Amazon EBS offers a few diffrent Volume Types that have different pricing rates and functionality. Each EBS Volume Type is described below:</p>
-<ul>
-<li><strong> General Purpose SSD (gp2, gp3)</strong>: General Purpose SSD (gp3) volumes offer cost-effective storage that is ideal for a broad range of workloads.</li>
-<li><strong> Provisioned IOPS (io1, io2)</strong>: Provisioned IOPS SSD (io1 and io2) volumes are designed to meet the needs of I/O-intensive workloads, particularly database workloads, that are sensitive to storage performance and consistency. Provisioned IOPS SSD volumes use a consistent IOPS rate, which you specify when you create the volume, and Amazon EBS delivers the provisioned performance 99.9 percent of the time.</li>
-</ul>
-<h2 id="stranded-volumes">Stranded Volumes</h2>
-<p>Oftentimes, EBS Volumes are created in conjunction with other AWS resources such as EC2 instances but are de-coupled from the lifecycle of those other resources. One common pattern we see is that developers will create EC2 instances with EBS Volumes attached but when they delete the EC2 instance, they assume that the EBS Volume is destroyed accordingly. In larger-scale environments with autoscaling this problem can grow significantly as a part of an AWS bill.</p>
-<p>We recommend that you periodically profile for unattached or stranded EBS Volumes. </p>
+<h3 id="fargate-vs-self-managed-ec2-on-ecs-or-eks">Fargate vs self-managed EC2 on ECS or EKS</h3>
+<p>Fargate charges a significant premium for managing the underlying nodes. Additionally, Fargate has varying degress of vCPU performance that differ depending on the Task. As a result, Fargate can have pitfalls relative to self-managed ECS or EKS on EC2 beyond just the additional costs. </p>
+<p>For a more in-depth article for seeing how Fargate is priced relative to self-managed EC2, please read the following blog post for <a href="https://www.vantage.sh/blog/fargate-pricing">understanding Fargate pricing</a>.</p>
                 
                   
                 
@@ -677,7 +669,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../cloudfront-pricing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CloudFront" rel="prev">
+        <a href="../ebs-pricing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: EBS" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -686,20 +678,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              CloudFront
+              EBS
             </div>
           </div>
         </a>
       
       
         
-        <a href="../ecs-and-fargate-pricing/" class="md-footer__link md-footer__link--next" aria-label="Next: ECS &amp; Fargate" rel="next">
+        <a href="../lambda-pricing/" class="md-footer__link md-footer__link--next" aria-label="Next: Lambda" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              ECS & Fargate
+              Lambda
             </div>
           </div>
           <div class="md-footer__button md-icon">

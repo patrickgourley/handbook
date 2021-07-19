@@ -261,8 +261,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/credits/" class="md-nav__link">
-        Credits
+      <a href="../../concepts/budgets/" class="md-nav__link">
+        Budgets
       </a>
     </li>
   
@@ -273,8 +273,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/budgets/" class="md-nav__link">
-        Budgets
+      <a href="../../concepts/credits/" class="md-nav__link">
+        Credits
       </a>
     </li>
   
@@ -311,6 +311,18 @@
     <li class="md-nav__item">
       <a href="../../concepts/reserved-instances/" class="md-nav__link">
         Reserved Instances
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/tags/" class="md-nav__link">
+        Tags
       </a>
     </li>
   
@@ -438,6 +450,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pricing-dimensions" class="md-nav__link">
+    Pricing Dimensions
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -475,8 +494,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../fargate-pricing/" class="md-nav__link">
-        Fargate
+      <a href="../ecs-and-fargate-pricing/" class="md-nav__link">
+        ECS & Fargate
       </a>
     </li>
   
@@ -566,6 +585,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pricing-dimensions" class="md-nav__link">
+    Pricing Dimensions
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -583,7 +609,19 @@
                 
                 <p><a href="https://aws.amazon.com/cloudwatch/pricing/">Amazon EBS Pricing Page</a></p>
 <h2 id="summary">Summary</h2>
-<p>Amazon CloudWatch is a logging, monitoring and observability service. Oftentimes CloudWatch is enabled or leveraged automatically by other AWS services you use and can accrue costs over time for metric and log storage. </p>
+<p>Amazon CloudWatch is a logging, monitoring and observability service. Oftentimes CloudWatch is enabled or leveraged automatically by other AWS services you use and can accrue costs over time for metric and log storage. CloudWatch is an umbrella of different services and as a result, we encourage you to explore subcategory costs of the overall CloudWatch line-item as certain components can accrue costs vs others. </p>
+<h2 id="pricing-dimensions">Pricing Dimensions</h2>
+<ul>
+<li><strong>Custom Metric Storage</strong>: AWS charges you for the number of custom metrics you store with them per month. </li>
+<li><strong>CloudWatch API Requests</strong>: AWS charges you for the following API requests: <code>GetMetricData</code>, <code>GetInsightRuleReport</code>, <code>GetMetricWidgetImage</code>, <code>GetMetricStatistics</code>, <code>ListMetrics</code>, <code>PutMetricData</code>, <code>GetDashboard</code>, <code>ListDashboards</code>, <code>PutDashboard</code> and <code>DeleteDashboards</code>.  </li>
+<li><strong>CloudWatch Dashboards</strong>: AWS charges $3.00 per month per CloudWatch dashboard. </li>
+<li><strong>CloudWatch Alarms</strong>: </li>
+<li><strong>CloudWatch Logs</strong>: AWS charges you for two components as it relates to CloudWatch Logs: (1) ingestion and (2) storage.</li>
+<li><strong>CloudWatch Events</strong>: AWS charges you for CloudWatch Events which are changes in your AWS environment. For example, you can trigger an event whenever an EC2 instance is created. You are charged a rate per one million events. </li>
+<li><strong>CloudWatch Contributor Insights</strong>: </li>
+<li><strong>CloudWatch Canaries</strong>: </li>
+</ul>
+<p>Help us improve this page by making a contribution on our <a href="https://github.com/vantage-sh/handbook">Github repository</a>.</p>
                 
                   
                 
