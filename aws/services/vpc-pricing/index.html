@@ -340,14 +340,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         AWS Services
@@ -504,6 +506,99 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elb-pricing/" class="md-nav__link">
+        ELB
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          VPC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        VPC
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pricing-dimensions" class="md-nav__link">
+    Pricing Dimensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nat-gateway" class="md-nav__link">
+    NAT Gateway
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-vpc-endpoints" class="md-nav__link">
+    Amazon VPC Endpoints
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloudfront-pricing/" class="md-nav__link">
+        CloudFront
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -555,8 +650,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#amazon-vpc-traffic-mirroring" class="md-nav__link">
-    Amazon VPC Traffic Mirroring
+  <a href="#amazon-vpc-endpoints" class="md-nav__link">
+    Amazon VPC Endpoints
   </a>
   
 </li>
@@ -574,22 +669,20 @@
               
                 
                 
-                  <h1>VPC Pricing | Vantage Cloud Cost Handbook</h1>
+                  <h1>VPC</h1>
                 
                 <p><a href="https://aws.amazon.com/vpc/pricing/">Amazon VPC Pricing Page</a></p>
 <h2 id="summary">Summary</h2>
-<p>Amazon Virtual Private Cloud (VPC) is an </p>
+<p>Amazon Virtual Private Cloud (VPC) is a service which allows customers to logically isolate their resources into different networks. Unless explicitly configured every VPC is completely isolated from every other VPC. There is no charge for a VPC in itself, however some optional sub-components of a VPC can incur charges.</p>
 <h2 id="pricing-dimensions">Pricing Dimensions</h2>
 <ul>
-<li>
-<p><strong>NAT Gateway Pricing</strong>: </p>
-</li>
-<li>
-<p><strong>Amazon VPC Traffic Mirroring Pricing</strong>:</p>
-</li>
+<li><strong>NAT Gateway Usage</strong>: NAT Gateways are billed per hour at a standard rate per region. Each partial hour is billed as a full hour.</li>
+<li><strong>NAT Gateway Transfer</strong>: NAT Gateways are billed per GB which is processed by the gateway regaurdless of where the data is being transferred to or from.</li>
 </ul>
 <h2 id="nat-gateway">NAT Gateway</h2>
-<h2 id="amazon-vpc-traffic-mirroring">Amazon VPC Traffic Mirroring</h2>
+<p>NAT (Network Address Translation) Gateways enable resources running inside of VPCs to connect to services outside of the VPC without needing to have those resources exposed to the public internet. Besides the standard usage and transfer charges on NAT Gateways you will also be charged standard bandwidth transfer charges on top of that depending on where the traffic is going.</p>
+<h2 id="amazon-vpc-endpoints">Amazon VPC Endpoints</h2>
+<p>VPC Endpoints allow resources to connect to other AWS services outside of a VPC, such as S3, without the need for a NAT Gateway. This is a good way to prevent NAT Gateway usage and transfer charges.</p>
                 
                   
                 
@@ -607,6 +700,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../elb-pricing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ELB" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              ELB
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../cloudfront-pricing/" class="md-footer__link md-footer__link--next" aria-label="Next: CloudFront" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              CloudFront
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

@@ -340,14 +340,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         AWS Services
@@ -504,6 +506,113 @@
   
 
           
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ELB
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ELB
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pricing-dimensions" class="md-nav__link">
+    Pricing Dimensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-load-balancer" class="md-nav__link">
+    Application Load Balancer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-load-balancer" class="md-nav__link">
+    Network Load Balancer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gateway-load-balancer" class="md-nav__link">
+    Gateway Load Balancer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classic-load-balancer" class="md-nav__link">
+    Classic Load Balancer
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vpc-pricing/" class="md-nav__link">
+        VPC
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloudfront-pricing/" class="md-nav__link">
+        CloudFront
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -588,20 +697,66 @@
               
                 
                 
-                  <h1>Elastic Load Balancer Pricing | Vantage Cloud Cost Handbook</h1>
+                  <h1>ELB</h1>
                 
                 <p><a href="https://aws.amazon.com/elasticloadbalancing/pricing/">Amazon ELB Pricing Page</a></p>
 <h2 id="summary">Summary</h2>
-<p>Amazon Elastic Load Balancer (ELB) is an ...</p>
+<p>Amazon Elastic Load Balancer (ELB) is a service which distributes traffic from a single endpoint (public or private) to one or many private resources. Most commonly an Elastic Load Balancer will be exposed to the public internet and will distribute the incoming traffic to several app servers (usually running on EC2 or ECS). Elastic Load Balancers can also be used to distribute private traffic from one service to another. There are different options for the type of ELB and they are priced differently and come with different feature sets.</p>
 <h2 id="pricing-dimensions">Pricing Dimensions</h2>
 <ul>
-<li><strong>Load Balancer Hours</strong>:</li>
-<li><strong>Throughput</strong>:</li>
+<li><strong>Load Balancer Hours</strong>: Every type of load balancer has a standard per hour rate and is always billed for a full hour.</li>
+<li><strong>Load Balancer Data Processed</strong>: Each type of load balancer has a formula for how the data processed by the load balancer is turned into an additional hourly charged.</li>
 </ul>
 <h2 id="application-load-balancer">Application Load Balancer</h2>
+<p>Application Load Balancers are useful for distributing layer 7 (HTTP, HTTPS, gRPC) traffic to application servers or other backends. ALBs have a standard hourly rate per region and a formula for calculating "LCU"-hours. The dimensions for calculating LCU are:</p>
+<ul>
+<li><strong>New Connections</strong>: a single LCU is 25 new connections per second</li>
+<li><strong>Active connections</strong>: a single LCU is 3,000 active connections per minute</li>
+<li><strong>Processed bytes</strong>: a single LCU is 1 GB per hour for EC2 instances, containers and IP addresses as targets and 0.4 GB per hour for Lambda functions as targets</li>
+<li><strong>Rule evaluations</strong>: a single LCU is 1,000 rule evaluations per second</li>
+</ul>
+<p>Whichever of these dimensions produces the highest LCU for an hour is what is used to create the charge for LCU-hour.</p>
 <h2 id="network-load-balancer">Network Load Balancer</h2>
+<p>Network Load Balacers are used for forwarding layer 4 traffic (TCP, UDP, TLS) to any other resoruce with an ip address. NLBs have a standard hourly rate per region and a formula for calculating "NLCU"-hours depending on the type of network traffic. The dimensions for calculating NCLU are:</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>TCP</th>
+<th>UDP</th>
+<th>TLS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New Connection or Flow</td>
+<td>800</td>
+<td>400</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Active Connection or Flow</td>
+<td>100,000</td>
+<td>50,000</td>
+<td>3,000</td>
+</tr>
+<tr>
+<td>Processed bytes</td>
+<td>1GB</td>
+<td>1GB</td>
+<td>1GB</td>
+</tr>
+</tbody>
+</table>
 <h2 id="gateway-load-balancer">Gateway Load Balancer</h2>
+<p>Gateway Load Balancers are used to proxy traffic through third-party virtual appliances which support GENEVE. GLBs have a standard hourly rate per region and a formula for calculating "GLCU"-hours. The dimensions for calculating GLCU are:</p>
+<ul>
+<li><strong>New Connections</strong>: a single LCU is 600 new connections per second</li>
+<li><strong>Active connections</strong>: a single LCU is 60,000 active connections per minute</li>
+<li><strong>Processed bytes</strong>: a single LCU is 1 GB per hour for EC2 instances, containers and IP addresses as targets and 0.4 GB per hour for Lambda functions as targets</li>
+</ul>
 <h2 id="classic-load-balancer">Classic Load Balancer</h2>
+<p>Classic load balancers are the original type of load balancer which has since been superceded by ALB and NLB. CLBs support both layer 7 and layer 4 traffic. CLBs have a standard hourly rate per region and a standard per GB rate per region for traffic processed. </p>
                 
                   
                 
@@ -619,6 +774,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../s3-pricing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: S3" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              S3
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../vpc-pricing/" class="md-footer__link md-footer__link--next" aria-label="Next: VPC" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              VPC
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

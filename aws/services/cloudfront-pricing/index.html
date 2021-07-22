@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#summary" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -420,18 +425,65 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
+    <li class="md-nav__item">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CloudFront
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         CloudFront
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pricing-dimensions" class="md-nav__link">
+    Pricing Dimensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#origin-shield" class="md-nav__link">
+    Origin Shield
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-pricing" class="md-nav__link">
+    Custom Pricing
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -509,6 +561,99 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elb-pricing/" class="md-nav__link">
+        ELB
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vpc-pricing/" class="md-nav__link">
+        VPC
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CloudFront
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        CloudFront
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pricing-dimensions" class="md-nav__link">
+    Pricing Dimensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#origin-shield" class="md-nav__link">
+    Origin Shield
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-pricing" class="md-nav__link">
+    Custom Pricing
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -522,6 +667,57 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pricing-dimensions" class="md-nav__link">
+    Pricing Dimensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#origin-shield" class="md-nav__link">
+    Origin Shield
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-pricing" class="md-nav__link">
+    Custom Pricing
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -530,7 +726,25 @@
                 
                   <h1>CloudFront</h1>
                 
-                
+                <p><a href="https://aws.amazon.com/cloudfront/pricing/">Amazon CloudFront Pricing Page</a></p>
+<h2 id="summary">Summary</h2>
+<p>Amazon CloudFront is a CDN service used to distribute and cache traffic from one region to multiple geographic endpoints globally. Every CloudFront distribution includes an origin which is used to pull the original data from. An origin will typically be an S3 bucket or Load Balancer Endpoint. The traffic is distributed globally to speed up the access to an application which recieves visitors from across the globe. CloudFront Distributions are billed based on the amount of traffic they request from the origin, distribute out to the internet as well as per request processed. Distribution out to the internet is priced differently depending on the region which it is accessed. Regions are grouped into geographic regions. When creating a distribution it is possible to select which regions CloudFront will serve traffic from.</p>
+<h2 id="pricing-dimensions">Pricing Dimensions</h2>
+<ul>
+<li>
+<p><strong>Transfer Out to Internet</strong>: Distributions are billed per GB of data transfered out of a geographic area to the internet. The prices are tiered and are lower the more traffic is transferred.</p>
+</li>
+<li>
+<p><strong>Regional Data Transfer Out to Origin</strong>: Distributions are billed per GB of data transfer from the distribution back to the origin. The prices are a flat rate and dependent on their geographic area.</p>
+</li>
+<li>
+<p><strong>Per Request</strong>: Distributions are billed per 10,000 requests and are different rates based on whether the request is HTTP or HTTPS. If origin shield is configured there is an additional charge per 10,000 requests and are a standard rate regardless of protocol. Both are priced differently depending on geographic area. </p>
+</li>
+</ul>
+<h2 id="origin-shield">Origin Shield</h2>
+<p>Origin Shield can be enabled in order to reduce the amount of traffic being served directly from the origin. Origin shields are not available in every region.</p>
+<h2 id="custom-pricing">Custom Pricing</h2>
+<p>For customers who are willing to make certain minimum traffic commits (typically 10 TB/month or higher) they can contact AWS and negotiate custom discounted rates.</p>
                 
                   
                 
@@ -552,7 +766,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../cloudwatch-pricing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CloudWatch" rel="prev">
+        <a href="../vpc-pricing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: VPC" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -561,26 +775,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              CloudWatch
+              VPC
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../ebs-pricing/" class="md-footer__link md-footer__link--next" aria-label="Next: EBS" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              EBS
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   

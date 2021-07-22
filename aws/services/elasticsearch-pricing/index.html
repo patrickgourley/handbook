@@ -504,6 +504,42 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elb-pricing/" class="md-nav__link">
+        ELB
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vpc-pricing/" class="md-nav__link">
+        VPC
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloudfront-pricing/" class="md-nav__link">
+        CloudFront
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -547,6 +583,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#storage-optimized-instances" class="md-nav__link">
+    Storage Optimized Instances
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reserved-instances" class="md-nav__link">
+    Reserved Instances
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -564,16 +614,20 @@
                 
                 <p><a href="https://aws.amazon.com/elasticsearch-service/pricing/">Amazon Elasticsearch Service Pricing Page</a></p>
 <h2 id="summary">Summary</h2>
-<p>Amazon Elasticsearch Service is an </p>
+<p>Amazon Elasticsearch Service is a full-managed service which runs <a href="https://www.elastic.co/elastic-stack/">ElasticSearch</a> which is used primarily for querying JSOn based search and analytics data. Amazon ElasticSearch Service is billed per instance for the amount of EBS storage attached to the instance and the type of instance which is used to run the service.</p>
 <h2 id="pricing-dimensions">Pricing Dimensions</h2>
 <ul>
 <li>
-<p><strong>Compute</strong>: </p>
+<p><strong>Instance Type Usage</strong>: ElasticSearch instance types are billed at an hourly rate and charged that hourly rate on a per-second basis for your usage. </p>
 </li>
 <li>
-<p><strong>Storage</strong>:</p>
+<p><strong>Attached Storage</strong>: ElasticSearch allows you to attach storage to the instances either as General Purpose Storage or Provisioned IOPS storage. Behind the scenes these are just managed EBS Volumes that ElasticSearch orchestrates on your behalf. However, on your monthly AWS bill these charges will show up under the ElasticSearch service and not under the EBS service. There are also options for high performance local SSD disks for storage optimized instances.</p>
 </li>
 </ul>
+<h2 id="storage-optimized-instances">Storage Optimized Instances</h2>
+<p>If better storage performance, above EBS, is needed you can select Storage Optmized instances which include local NVMe SSD disks.</p>
+<h2 id="reserved-instances">Reserved Instances</h2>
+<p>As ElasticSearch instances are <strong>not</strong> covered by <a href="/aws/concepts/savings-plans/">AWS Savings Plans</a>, you must rely on procuring <a href="/aws/concepts/reserved-instances/">Reserved Instances</a> specifically for ElasticSearch. Reserved Instances are covered in depth under General Concepts and we encourage you to read up more on them there for the most up-to-date information.</p>
                 
                   
                 
