@@ -237,32 +237,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../concepts/bill/" class="md-nav__link">
-        Your Monthly Bill
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../concepts/regions/" class="md-nav__link">
         Regions
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../concepts/budgets/" class="md-nav__link">
-        Budgets
       </a>
     </li>
   
@@ -469,6 +445,13 @@
         <li class="md-nav__item">
   <a href="#reserved-instances" class="md-nav__link">
     Reserved Instances
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generational-upgrades" class="md-nav__link">
+    Generational Upgrades
   </a>
   
 </li>
@@ -692,6 +675,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#generational-upgrades" class="md-nav__link">
+    Generational Upgrades
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#instance-type-families" class="md-nav__link">
     Instance Type Families
   </a>
@@ -731,8 +721,10 @@
 <p>EC2 Instances are covered by AWS Savings Plans. Savings Plans are covered more in depth as a general concept <a href="/aws/concepts/savings-plans/">here</a>. As it relates to EC2, Savings Plans are preferable as they present the same savings as Reserved Instances but aren't constrained to a single instance type. </p>
 <h2 id="reserved-instances">Reserved Instances</h2>
 <p>EC2 Instances are covered by AWS Reserved Instances. Reserved Instances are covered more in depth as a general concept <a href="/aws/concepts/reserved-instances/">here</a>. As it relates to EC2, Reserved Instances aren't preferred as they present the same savings as Savings Plans but are constrained to a single instance type where as Savings Plans give greater flexibility. </p>
+<h2 id="generational-upgrades">Generational Upgrades</h2>
+<p>EC2 instance types are grouped into families (discussed below) with multiple generations. For example a <code>m4.4xlarge</code> is of family type <code>m</code> and generation <code>4</code>. The next generation for the same instance type would be <code>m5.4xlarge</code>. Typically, as cloud infrastructure providers release new families it's cheaper and more performant to run the later generation instance types. Upgrade instances from one generation to another can be a major area of cost savings. Generation upgrades usually result in between 5% and 10% cost savings per generation and varies per family. </p>
 <h2 id="instance-type-families">Instance Type Families</h2>
-<p>EC2 Instance Types are organized into "Families" and each family can have multiple "Generations". By looking at each instance type you can infer its Family and Generation from the instance type name. For example, a <code>c5.4xlarge</code> is the <code>c</code> Family and <code>5th</code> Generation. Below is a table of EC2 Instance Families and simple descriptions</p>
+<p>EC2 Instance Types are organized into "Families" and each family can have multiple "Generations". By looking at each instance type you can infer its Family and Generation from the instance type name. For example, a <code>c5.4xlarge</code> is the <code>c</code> Family and <code>5th</code> Generation. Below is a table of EC2 Instance Families and simple descriptions:</p>
 <table>
 <thead>
 <tr>
