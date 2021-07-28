@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="http://handbook.vantage.sh/aws/services/ecr-pricing/">
+        <link rel="canonical" href="http://handbook.vantage.sh/aws/services/workspaces-pricing/">
       
       <link rel="icon" href="../../../assets/logo.svg">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
     
     
       
-        <title>ECR Pricing | Vantage Cloud Cost Handbook - Cloud Cost Handbook</title>
+        <title>WorkSpaces Pricing | Vantage Cloud Cost Handbook - Cloud Cost Handbook</title>
       
     
     
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ECR Pricing | Vantage Cloud Cost Handbook
+              WorkSpaces Pricing | Vantage Cloud Cost Handbook
             
           </span>
         </div>
@@ -417,88 +417,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          ECR
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ecr-pricing/" class="md-nav__link">
         ECR
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pricing-dimensions" class="md-nav__link">
-    Pricing Dimensions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#storage-costs-per-ecr-repository" class="md-nav__link">
-    Storage Costs per ECR Repository
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lifecycle-policies" class="md-nav__link">
-    Lifecycle Policies
-  </a>
-  
-    <nav class="md-nav" aria-label="Lifecycle Policies">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-imagecountmorethan-lifeycle-policy" class="md-nav__link">
-    Example imageCountMoreThan Lifeycle Policy
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-sinceimagepushed-lifeycle-policy" class="md-nav__link">
-    Example sinceImagePushed Lifeycle Policy
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -602,11 +525,61 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../workspaces-pricing/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          WorkSpaces
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         WorkSpaces
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pricing-dimensions" class="md-nav__link">
+    Pricing Dimensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-unused-workspaces" class="md-nav__link">
+    Monitoring Unused WorkSpaces
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -655,36 +628,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#storage-costs-per-ecr-repository" class="md-nav__link">
-    Storage Costs per ECR Repository
+  <a href="#monitoring-unused-workspaces" class="md-nav__link">
+    Monitoring Unused WorkSpaces
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lifecycle-policies" class="md-nav__link">
-    Lifecycle Policies
-  </a>
-  
-    <nav class="md-nav" aria-label="Lifecycle Policies">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-imagecountmorethan-lifeycle-policy" class="md-nav__link">
-    Example imageCountMoreThan Lifeycle Policy
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-sinceimagepushed-lifeycle-policy" class="md-nav__link">
-    Example sinceImagePushed Lifeycle Policy
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -701,114 +647,20 @@
               
                 
                 
-                  <h1>ECR</h1>
+                  <h1>WorkSpaces</h1>
                 
-                <p><a class="md-button" href="https://aws.amazon.com/ecr/pricing/">Amazon ECR Pricing Page</a></p>
+                <p><a href="https://aws.amazon.com/workspaces/pricing">Amazon WorkSpaces Pricing Page</a></p>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">#</a></h2>
-<p>Amazon Elastic Container Registry (ECR) is a fully managed container registry that allows you to store container images. You can create as many "Repositories" as you'd like that are free. As you push container "Images" to your repository, you're charged for the storage of these images which can acrue over time. Additionally, ECR charges different data transfer rates for private versus public repositories. </p>
+<p>Amazon WorkSpaces is a fully managed, persistent desktop virtualization service. You can use Amazon WorkSpaces to provision either Windows or Linux desktops - each come with their own set of pricing implications discussed below. WorkSpace pricing can either be done in a monthly or hourly fashion. </p>
 <h2 id="pricing-dimensions">Pricing Dimensions<a class="headerlink" href="#pricing-dimensions" title="Permanent link">#</a></h2>
-<table>
-<thead>
-<tr>
-<th>Dimension</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Container Image Storage</td>
-<td>Amazon ECR charges a rate per month for the amount of storage per GB you store for container images.</td>
-</tr>
-<tr>
-<td>Data Transfer</td>
-<td>Amazon ECR charges different rates for data transfer from public and private repositories.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="storage-costs-per-ecr-repository">Storage Costs per ECR Repository<a class="headerlink" href="#storage-costs-per-ecr-repository" title="Permanent link">#</a></h2>
-<p>Determining the cost per Container Repository can be a lot of effort, especially if you have a large quantity of images. To calculate the storage cost per container repository:</p>
 <ul>
-<li>List all of your container images</li>
-<li>Collect the image digest from each</li>
-<li>Determine just the unique digests of the layers in your container repository</li>
-<li>Get the size of each unique digest.</li>
+<li><strong>Compute Type</strong>: WorkSpaces offers seven different types of compute types. They are <code>Value</code>, <code>Standard</code>, <code>Performance</code>, <code>Power</code> and <code>PowerPro</code>, <code>Graphics</code>, <code>GraphicsPro</code>. Each of these classes has a different set of underlying resources that contribute to costs differently. The order that these classes are listed in are from cheapest to most expensive. </li>
+<li><strong>Platform Type</strong>: Linux or Windows. You are charged an additional amount of money for running on Windows vs Linux. You may also bring your own license for Windows WorkSpaces to reduce Windows licensing costs if you have that available. </li>
+<li><strong>Running Mode</strong>: <code>AUTO_STOP</code> or <code>ALWAYS_ON</code>. When you choose <code>AUTO_STOP</code> you are choosing to create a WorkSpace that has a pre-deteremined expiration time in which that WorkSpace will terminate and is billed per hour. When you choose <code>ALWAYS_ON</code> you are charged on a monthly rate basis and the WorkSpace will persist being on until you take action to terminate it.  </li>
+<li><strong>WorkSpace Size</strong>: Each Compute Type offers four different configurations with different amounts of vCPU and GB of Memory. <code>Graphic</code> and <code>GraphicsPro</code> only offer one size. Depending on the size you choose, you will pay a more expensive rate. </li>
 </ul>
-<p>If you prefer not to do this manually yourself, <a href="https://www.vantage.sh/">Vantage</a> will compute the size and corresponding cost of all repositories automatically when you connect an AWS account.</p>
-<h2 id="lifecycle-policies">Lifecycle Policies<a class="headerlink" href="#lifecycle-policies" title="Permanent link">#</a></h2>
-<p>ECR stores every container image you push to a registry by default. Over time, the storage of all of these images can add up. Amazon offers a primitive called a "Lifecycle Policy" that allows you to set conditions for having Amazon clean up images on your behalf. There are two types of lifeycle policies:</p>
-<table>
-<thead>
-<tr>
-<th>Lifecycle Policy</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>imageCountMoreThan</td>
-<td>ECR allows you to define a certain number of images to retain and anything over that count will be cleaned up. For example if you set a Lifecycle Policy with a imageCountMoreThan value of 10, your most recent 10 images will always be kept.</td>
-</tr>
-<tr>
-<td>sinceImagePushed</td>
-<td>ECR allows you to set lifecycle policies with a value of sinceImagePushed which has a value of a certain number of days. So for example if you have a Lifecycle Policy applied with a sinceImagePushed value of 7, ECR will delete images as often as they are older than 7 days.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Note</strong>: that when you apply a Lifecycle Policy, it is evaluated immediately. So if you have 500 images in a repositority and impose a lifeycle policy of 10 as soon as that policy is applied ECR will delete the 490 oldest images. </p>
-<h3 id="example-imagecountmorethan-lifeycle-policy">Example <code>imageCountMoreThan</code> Lifeycle Policy<a class="headerlink" href="#example-imagecountmorethan-lifeycle-policy" title="Permanent link">#</a></h3>
-<p>Here's an example of how to impose a Lifeycle Policy via the AWS CLI using the value of imageCountMoreThan: </p>
-<div class="highlight"><pre><span></span><code>aws ecr put-lifecycle-policy \
-    --repository-name &quot;vantage/mcyolo&quot; \
-    --lifecycle-policy-text &quot;file://policy.json&quot;
-</code></pre></div>
-<p>Where the content of the file for policy.json is the following:</p>
-<div class="highlight"><pre><span></span><code>{
-  &quot;rules&quot;: [
-     {
-       &quot;rulePriority&quot;: 1,
-       &quot;description&quot;: &quot;Expire images over a count of 10&quot;,
-       &quot;selection&quot;: {
-         &quot;tagStatus&quot;: &quot;untagged&quot;,
-         &quot;countType&quot;: &quot;imageCountMoreThan&quot;,
-         &quot;countNumber&quot;: 10
-       },
-       &quot;action&quot;: {
-         &quot;type&quot;: &quot;expire&quot;
-       }
-     }
-  ]
-}
-</code></pre></div>
-<h3 id="example-sinceimagepushed-lifeycle-policy">Example <code>sinceImagePushed</code> Lifeycle Policy<a class="headerlink" href="#example-sinceimagepushed-lifeycle-policy" title="Permanent link">#</a></h3>
-<p>Here's an example of how to impose a Lifeycle Policy via the AWS CLI using the value of sinceImagePushed: </p>
-<div class="highlight"><pre><span></span><code>aws ecr put-lifecycle-policy \
-    --repository-name &quot;vantage/mcyolo&quot; \
-    --lifecycle-policy-text &quot;file://policy.json&quot;
-</code></pre></div>
-<p>Where the content of the file for policy.json is the following:</p>
-<div class="highlight"><pre><span></span><code>{
-  &quot;rules&quot;: [
-     {
-       &quot;rulePriority&quot;: 1,
-       &quot;description&quot;: &quot;Expire images older than 14 days&quot;,
-       &quot;selection&quot;: {
-         &quot;tagStatus&quot;: &quot;untagged&quot;,
-         &quot;countType&quot;: &quot;sinceImagePushed&quot;,
-         &quot;countUnit&quot;: &quot;days&quot;,
-         &quot;countNumber&quot;: 14
-       },
-       &quot;action&quot;: {
-         &quot;type&quot;: &quot;expire&quot;
-       }
-     }
-  ]
-}
-</code></pre></div>
-<p><br/></p>
-<div class="admonition contribute">
-<p class="admonition-title">Contribute</p>
-<p>Help us improve this page by making a contribution on our <a href="https://github.com/vantage-sh/handbook">Github repository</a>.</p>
-</div>
+<h2 id="monitoring-unused-workspaces">Monitoring Unused WorkSpaces<a class="headerlink" href="#monitoring-unused-workspaces" title="Permanent link">#</a></h2>
+<p>WorkSpaces have an attribute named <code>last_known_user_connection_timestamp</code> that maintains a timestamp of when was the last time a user has accessed this WorkSpace. You should periodically audit WorkSpaces to ensure that they're being used as otherwise it can be wasteful and a contributor to costs. In the event that this timestamp isn't present, it means that a user has never actually connected to this instance. Additionally, you can look for a certain amount of time that has progressed since a user has accessed it - in the event that a user hasn't accessed a WorkSpace in over a few weeks, it may be a good candidate for clean up and cost savings. </p>
                 
                   
                 
@@ -830,7 +682,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../ecs-and-fargate-pricing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ECS &amp; Fargate" rel="prev">
+        <a href="../vpc-pricing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: VPC" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -839,26 +691,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              ECS & Fargate
+              VPC
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../elb-pricing/" class="md-footer__link md-footer__link--next" aria-label="Next: ELB" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              ELB
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   

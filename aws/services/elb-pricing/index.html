@@ -11,8 +11,8 @@
       
         <link rel="canonical" href="http://handbook.vantage.sh/aws/services/elb-pricing/">
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+      <link rel="icon" href="../../../assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1118c9be.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ba0d045b.min.css">
         
       
     
@@ -37,6 +37,8 @@
       
     
     
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
     
       
@@ -87,8 +89,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="Cloud Cost Handbook" class="md-header__button md-logo" aria-label="Cloud Cost Handbook" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -121,14 +122,18 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -167,8 +172,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Cloud Cost Handbook" class="md-nav__button md-logo" aria-label="Cloud Cost Handbook" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     Cloud Cost Handbook
@@ -589,6 +593,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workspaces-pricing/" class="md-nav__link">
+        WorkSpaces
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -675,24 +691,58 @@
                 
                   <h1>ELB</h1>
                 
-                <p><a href="https://aws.amazon.com/elasticloadbalancing/pricing/">Amazon ELB Pricing Page</a></p>
-<h2 id="summary">Summary</h2>
+                <p><a class="md-button" href="https://aws.amazon.com/elasticloadbalancing/pricing/">Amazon ELB Pricing Page</a></p>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">#</a></h2>
 <p>Amazon Elastic Load Balancer (ELB) is a service which distributes traffic from a single endpoint (public or private) to one or many private resources. Most commonly an Elastic Load Balancer will be exposed to the public internet and will distribute the incoming traffic to several app servers (usually running on EC2 or ECS). Elastic Load Balancers can also be used to distribute private traffic from one service to another. There are different options for the type of ELB and they are priced differently and come with different feature sets.</p>
-<h2 id="pricing-dimensions">Pricing Dimensions</h2>
-<ul>
-<li><strong>Load Balancer Hours</strong>: Every type of load balancer has a standard per hour rate and is always billed for a full hour.</li>
-<li><strong>Load Balancer Data Processed</strong>: Each type of load balancer has a formula for how the data processed by the load balancer is turned into an additional hourly charged.</li>
-</ul>
-<h2 id="application-load-balancer">Application Load Balancer</h2>
+<h2 id="pricing-dimensions">Pricing Dimensions<a class="headerlink" href="#pricing-dimensions" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Load Balancer Hours</td>
+<td>Every type of load balancer has a standard per hour rate and is always billed for a full hour.</td>
+</tr>
+<tr>
+<td>Load Balancer Data Processed</td>
+<td>Each type of load balancer has a formula for how the data processed by the load balancer is turned into an additional hourly charged.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="application-load-balancer">Application Load Balancer<a class="headerlink" href="#application-load-balancer" title="Permanent link">#</a></h2>
 <p>Application Load Balancers are useful for distributing layer 7 (HTTP, HTTPS, gRPC) traffic to application servers or other backends. ALBs have a standard hourly rate per region and a formula for calculating "LCU"-hours. The dimensions for calculating LCU are:</p>
-<ul>
-<li><strong>New Connections</strong>: a single LCU is 25 new connections per second</li>
-<li><strong>Active connections</strong>: a single LCU is 3,000 active connections per minute</li>
-<li><strong>Processed bytes</strong>: a single LCU is 1 GB per hour for EC2 instances, containers and IP addresses as targets and 0.4 GB per hour for Lambda functions as targets</li>
-<li><strong>Rule evaluations</strong>: a single LCU is 1,000 rule evaluations per second</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New Connections</td>
+<td>a single LCU is 25 new connections per second</td>
+</tr>
+<tr>
+<td>Active connections</td>
+<td>a single LCU is 3,000 active connections per minute</td>
+</tr>
+<tr>
+<td>Processed bytes</td>
+<td>a single LCU is 1 GB per hour for EC2 instances, containers and IP addresses as targets and 0.4 GB per hour for Lambda functions as targets</td>
+</tr>
+<tr>
+<td>Rule evaluations</td>
+<td>a single LCU is 1,000 rule evaluations per second</td>
+</tr>
+</tbody>
+</table>
 <p>Whichever of these dimensions produces the highest LCU for an hour is what is used to create the charge for LCU-hour.</p>
-<h2 id="network-load-balancer">Network Load Balancer</h2>
+<h2 id="network-load-balancer">Network Load Balancer<a class="headerlink" href="#network-load-balancer" title="Permanent link">#</a></h2>
 <p>Network Load Balacers are used for forwarding layer 4 traffic (TCP, UDP, TLS) to any other resoruce with an ip address. NLBs have a standard hourly rate per region and a formula for calculating "NLCU"-hours depending on the type of network traffic. The dimensions for calculating NCLU are:</p>
 <table>
 <thead>
@@ -724,15 +774,37 @@
 </tr>
 </tbody>
 </table>
-<h2 id="gateway-load-balancer">Gateway Load Balancer</h2>
+<h2 id="gateway-load-balancer">Gateway Load Balancer<a class="headerlink" href="#gateway-load-balancer" title="Permanent link">#</a></h2>
 <p>Gateway Load Balancers are used to proxy traffic through third-party virtual appliances which support GENEVE. GLBs have a standard hourly rate per region and a formula for calculating "GLCU"-hours. The dimensions for calculating GLCU are:</p>
-<ul>
-<li><strong>New Connections</strong>: a single LCU is 600 new connections per second</li>
-<li><strong>Active connections</strong>: a single LCU is 60,000 active connections per minute</li>
-<li><strong>Processed bytes</strong>: a single LCU is 1 GB per hour for EC2 instances, containers and IP addresses as targets and 0.4 GB per hour for Lambda functions as targets</li>
-</ul>
-<h2 id="classic-load-balancer">Classic Load Balancer</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New Connections</td>
+<td>a single LCU is 600 new connections per second</td>
+</tr>
+<tr>
+<td>Active connections</td>
+<td>a single LCU is 60,000 active connections per minute</td>
+</tr>
+<tr>
+<td>Processed bytes</td>
+<td>a single LCU is 1 GB per hour for EC2 instances, containers and IP addresses as targets and 0.4 GB per hour for Lambda functions as targets</td>
+</tr>
+</tbody>
+</table>
+<h2 id="classic-load-balancer">Classic Load Balancer<a class="headerlink" href="#classic-load-balancer" title="Permanent link">#</a></h2>
 <p>Classic load balancers are the original type of load balancer which has since been superceded by ALB and NLB. CLBs support both layer 7 and layer 4 traffic. CLBs have a standard hourly rate per region and a standard per GB rate per region for traffic processed. </p>
+<p><br/></p>
+<div class="admonition contribute">
+<p class="admonition-title">Contribute</p>
+<p>Help us improve this page by making a contribution on our <a href="https://github.com/vantage-sh/handbook">Github repository</a>.</p>
+</div>
                 
                   
                 
@@ -805,10 +877,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.716f8af4.min.js"></script>
       
     
   </body>
