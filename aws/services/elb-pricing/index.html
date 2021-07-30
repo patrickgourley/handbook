@@ -695,7 +695,7 @@
 </tbody>
 </table>
 <h2 id="application-load-balancer">Application Load Balancer<a class="headerlink" href="#application-load-balancer" title="Permanent link">#</a></h2>
-<p>Application Load Balancers are useful for distributing layer 7 (HTTP, HTTPS, gRPC) traffic to application servers or other backends. ALBs have a standard hourly rate per region and a formula for calculating "LCU"-hours. The dimensions for calculating LCU are:</p>
+<p>Application Load Balancers (ALB) are useful for distributing layer 7 (HTTP, HTTPS, gRPC) traffic to application servers or other backends. ALBs have a standard hourly rate per region and a formula for calculating "LCU"-hours. The dimensions for calculating LCU are:</p>
 <table>
 <thead>
 <tr>
@@ -706,25 +706,25 @@
 <tbody>
 <tr>
 <td>New Connections</td>
-<td>a single LCU is 25 new connections per second</td>
+<td>A single LCU is 25 new connections per second.</td>
 </tr>
 <tr>
 <td>Active connections</td>
-<td>a single LCU is 3,000 active connections per minute</td>
+<td>A single LCU is 3,000 active connections per minute.</td>
 </tr>
 <tr>
 <td>Processed bytes</td>
-<td>a single LCU is 1 GB per hour for EC2 instances, containers and IP addresses as targets and 0.4 GB per hour for Lambda functions as targets</td>
+<td>A single LCU is 1 GB per hour for EC2 instances, containers and IP addresses as targets and 0.4 GB per hour for Lambda functions as targets.</td>
 </tr>
 <tr>
 <td>Rule evaluations</td>
-<td>a single LCU is 1,000 rule evaluations per second</td>
+<td>A single LCU is 1,000 rule evaluations per second.</td>
 </tr>
 </tbody>
 </table>
 <p>Whichever of these dimensions produces the highest LCU for an hour is what is used to create the charge for LCU-hour.</p>
 <h2 id="network-load-balancer">Network Load Balancer<a class="headerlink" href="#network-load-balancer" title="Permanent link">#</a></h2>
-<p>Network Load Balacers are used for forwarding layer 4 traffic (TCP, UDP, TLS) to any other resoruce with an ip address. NLBs have a standard hourly rate per region and a formula for calculating "NLCU"-hours depending on the type of network traffic. The dimensions for calculating NCLU are:</p>
+<p>Network Load Balacers (NLB) are used for forwarding layer 4 traffic (TCP, UDP, TLS) to any other resoruce with an IP address. NLBs have a standard hourly rate per region and a formula for calculating "NLCU"-hours depending on the type of network traffic. The dimensions for calculating NCLU are:</p>
 <table>
 <thead>
 <tr>
@@ -767,15 +767,15 @@
 <tbody>
 <tr>
 <td>New Connections</td>
-<td>a single LCU is 600 new connections per second</td>
+<td>A single LCU is 600 new connections per second.</td>
 </tr>
 <tr>
 <td>Active connections</td>
-<td>a single LCU is 60,000 active connections per minute</td>
+<td>A single LCU is 60,000 active connections per minute.</td>
 </tr>
 <tr>
 <td>Processed bytes</td>
-<td>a single LCU is 1 GB per hour for EC2 instances, containers and IP addresses as targets and 0.4 GB per hour for Lambda functions as targets</td>
+<td>A single LCU is 1 GB per hour for EC2 instances, containers and IP addresses as targets and 0.4 GB per hour for Lambda functions as targets.</td>
 </tr>
 </tbody>
 </table>
