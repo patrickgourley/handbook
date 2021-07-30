@@ -384,6 +384,46 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cloudfront-versus-cloudflare1" class="md-nav__link">
+    CloudFront versus Cloudflare1
+  </a>
+  
+    <nav class="md-nav" aria-label="CloudFront versus Cloudflare1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    Considerations
+  </a>
+  
+    <nav class="md-nav" aria-label="Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#availability" class="md-nav__link">
+    Availability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sales" class="md-nav__link">
+    Sales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -629,6 +669,46 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#cloudfront-versus-cloudflare1" class="md-nav__link">
+    CloudFront versus Cloudflare1
+  </a>
+  
+    <nav class="md-nav" aria-label="CloudFront versus Cloudflare1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    Considerations
+  </a>
+  
+    <nav class="md-nav" aria-label="Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#availability" class="md-nav__link">
+    Availability
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sales" class="md-nav__link">
+    Sales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -646,7 +726,7 @@
                 
                 <p><a class="md-button" href="https://aws.amazon.com/cloudfront/pricing/">Amazon CloudFront Pricing Page</a></p>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">#</a></h2>
-<p>Amazon CloudFront is a CDN service used to distribute and cache traffic from one region to multiple geographic endpoints globally. Every CloudFront distribution includes an origin which is used to pull the original data from. An origin will typically be an S3 bucket or Load Balancer Endpoint. The traffic is distributed globally to speed up the access to an application which recieves visitors from across the globe. CloudFront Distributions are billed based on the amount of traffic they request from the origin, distribute out to the internet as well as per request processed. Distribution out to the internet is priced differently depending on the region which it is accessed. Regions are grouped into geographic regions. When creating a distribution it is possible to select which regions CloudFront will serve traffic from.</p>
+<p>Amazon CloudFront is a content delivery network (CDN) service used to distribute and cache traffic from one region to multiple geographic endpoints globally. Every CloudFront distribution includes an origin which is used to pull the original data from. An origin will typically be an S3 bucket or Load Balancer Endpoint. The traffic is distributed globally to speed up the access to an application which recieves visitors from across the globe. CloudFront Distributions are billed based on the amount of traffic they request from the origin, distribute out to the internet as well as per request processed. Distribution out to the internet is priced differently depending on the region which it is accessed. Regions are grouped into geographic regions. When creating a distribution it is possible to select which regions CloudFront will serve traffic from.</p>
 <h2 id="pricing-dimensions">Pricing Dimensions<a class="headerlink" href="#pricing-dimensions" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -662,7 +742,7 @@
 </tr>
 <tr>
 <td>Regional Data Transfer Out to Origin</td>
-<td>Distributions are billed per GB of data transfer from the distribution back to the origin. The prices are a flat rate and dependent on their geographic area.</td>
+<td>Distributions are billed per GB of data transfer from the distribution back to the origin. The prices are a flat-rate and dependent on their geographic area.</td>
 </tr>
 <tr>
 <td>Per Request</td>
@@ -674,10 +754,35 @@
 <p>Origin Shield can be enabled in order to reduce the amount of traffic being served directly from the origin. Origin shields are not available in every region.</p>
 <h2 id="custom-pricing">Custom Pricing<a class="headerlink" href="#custom-pricing" title="Permanent link">#</a></h2>
 <p>For customers who are willing to make certain minimum traffic commits (typically 10 TB/month or higher) they can contact AWS and negotiate custom discounted rates.</p>
+<h2 id="cloudfront-versus-cloudflare1">CloudFront versus Cloudflare<sup id="fnref:whynoothervendors"><a class="footnote-ref" href="#fn:whynoothervendors">1</a></sup><a class="headerlink" href="#cloudfront-versus-cloudflare1" title="Permanent link">#</a></h2>
+<p>Cloudflare is an edge network that offers a number of different performance, availability and security services. One of those services is an edge caching service that offer effectively the same service as Amazon CloudFront. The most important distinction between CloudFront and Cloudflare is not a technical differentiation but a business model differentiation. CloudFront utilizes a metered pricing model whereby you pay based on the amount of traffic that is served via the CloudFront service.<sup id="fnref:cloudfrontpricing"><a class="footnote-ref" href="#fn:cloudfrontpricing">2</a></sup> Cloudflare, on the otherhand, offers flat-rate pricing for its service without any bandwidth caps.<sup id="fnref:cloudflaretos"><a class="footnote-ref" href="#fn:cloudflaretos">3</a></sup> </p>
+<p>What this means is that as a customer of Cloudflare's Business plan, you can pay $200 per month and delivery unlimited traffic via the Cloudflare CDN. Seems too good to be true? Feel free to browse the official Cloudflare community where this question is <a href="https://community.cloudflare.com/t/to-support-about-cdn-plan/166219">asked</a> and <a href="https://community.cloudflare.com/t/cloudflare-doesnt-mention-in-plans-that-how-much-monthly-bandwidth-will-provides/161097">answered</a> multiple times.</p>
+<h3 id="considerations">Considerations<a class="headerlink" href="#considerations" title="Permanent link">#</a></h3>
+<p>Price is not the only consideration that goes into making a decision about whether to utilize CloudFront or a competing CDN service. Performance, availability, user experience, support and legal compliance are other factors that will factor into the decision to utilize one service over another.</p>
+<h4 id="availability">Availability<a class="headerlink" href="#availability" title="Permanent link">#</a></h4>
+<p>In order to offer customers unlimited bandwidth, Cloudflare utilizes service degradation based on their plan levels to prioritize higher tier customers in the event of a service degredation. The two most common service degradations for Cloudflare are either a DDoS attack that is overwhelming one or more points-of-presence (PoP) in the network or a legitimate surge in traffic due to any number of events. </p>
+<p>When the resources for a PoP are being depleted and service is being degraded, Cloudflare will choose to route traffic for customers out of that location based on the plan level they are subscribed to. Free traffic will be routed away from the PoP first, then Pro, Business, etc. The effect of having traffic routed out of a specific PoP is that users that are closest to the PoP will have some level of service degredation since they will instead have their traffic served from a PoP that is farther away than their most ideal PoP. In locations where the next nearest available PoP is close this degredation will be practically unnoticable. In locations where the next available PoP is topologically distant service degredation can potentially be significant.</p>
+<h4 id="sales">Sales<a class="headerlink" href="#sales" title="Permanent link">#</a></h4>
+<p>Another side effect of subscribing to a self-serve plan from Cloudflare is that users of these plans are used as part of the sales funnel for the Cloudflare sales team. What this means is that by signing up for Cloudflare you are giving your contact information that can be utilzied by the sales team in order for them to contact you about other Cloudflare services and offerings. </p>
+<p>The important thing to remember is that, as long as you aren't breaking the Cloudflare Terms of Service (ToS) they cannot force you to purchase any additional services. They can however annoy, bother and even threaten you (even if the threat is empty) endlessly. Sales teams are incentivized by commission, this is part of their job. You've been warned.</p>
 <p><br/></p>
 <div class="admonition contribute">
 <p class="admonition-title">Contribute</p>
 <p>Help us improve this page by making a contribution on our <a href="https://github.com/vantage-sh/handbook">Github repository</a>.</p>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:whynoothervendors">
+<p>This guide is naming Cloudflare and no other vendors in this space due to the unique offerings that Cloudflare has that no other provider offers. Specifically, that they offer self-serve plans with flat-rate pricing and no bandwidth caps. If you are aware of any other services with a similar offering, please submit an issue or pull request and we will update the guide.&#160;<a class="footnote-backref" href="#fnref:whynoothervendors" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:cloudfrontpricing">
+<p>Direct link to CloudFront pricing that details metered pricing model: https://aws.amazon.com/cloudfront/pricing/&#160;<a class="footnote-backref" href="#fnref:cloudfrontpricing" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:cloudflaretos">
+<p>Direct link to the Cloudflare Terms of Service for the self-serve plans (i.e. the Free, Pro and Business plans):https://www.cloudflare.com/terms/&#160;<a class="footnote-backref" href="#fnref:cloudflaretos" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
                 
                   
