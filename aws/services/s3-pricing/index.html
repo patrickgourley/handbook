@@ -585,6 +585,46 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#s3-versus-cloudflare-bandwidth-alliance-partner" class="md-nav__link">
+    S3 Versus Cloudflare Bandwidth Alliance Partner
+  </a>
+  
+    <nav class="md-nav" aria-label="S3 Versus Cloudflare Bandwidth Alliance Partner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    Considerations
+  </a>
+  
+    <nav class="md-nav" aria-label="Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complexity" class="md-nav__link">
+    Complexity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    Use-cases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -678,6 +718,46 @@
   <a href="#s3-bucket-request-metrics" class="md-nav__link">
     S3 Bucket Request Metrics
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s3-versus-cloudflare-bandwidth-alliance-partner" class="md-nav__link">
+    S3 Versus Cloudflare Bandwidth Alliance Partner
+  </a>
+  
+    <nav class="md-nav" aria-label="S3 Versus Cloudflare Bandwidth Alliance Partner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#considerations" class="md-nav__link">
+    Considerations
+  </a>
+  
+    <nav class="md-nav" aria-label="Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complexity" class="md-nav__link">
+    Complexity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    Use-cases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -823,10 +903,27 @@
   --region YOUR_BUCKET_REGION
 </code></pre></div>
 <p><strong>Note</strong>: it takes roughly 15 minutes for AWS to begin delivering these metrics after being enabled.</p>
+<h2 id="s3-versus-cloudflare-bandwidth-alliance-partner">S3 Versus Cloudflare Bandwidth Alliance Partner<a class="headerlink" href="#s3-versus-cloudflare-bandwidth-alliance-partner" title="Permanent link">#</a></h2>
+<p>The <a href="https://www.cloudflare.com/bandwidth-alliance/">Cloudflare Bandwidth Alliance</a> is a group of infrastructure providers that have decided to either completely waive or massively discount egress fees for shared customers. This can be a huge source of savings for customers that have an AWS bill where S3 egress costs make up a large portion of the aforementioned bill.</p>
+<p>By utilizing Cloudflare's content delivery network (CDN) service in tandem with a Bandwidth Alliance provider, customer can get no-cost content transit from their origin server to Cloudflare servers distributed around the world. This effectively reproduces the cost benefit that users get for pairing CloudFront with an AWS service like S3.<sup id="fnref:noegressfees"><a class="footnote-ref" href="#fn:noegressfees">1</a></sup> Utilizing one of Cloudflare's self-serve plans, customer can also cap their cost to deliver content via flat-rate pricing. Further details can be found at in the <a href="https://handbook.vantage.sh/aws/services/cloudfront-pricing/#cloudfront-versus-cloudflare">CloudFront service article</a> of the Cloud Cost Handbook.</p>
+<h3 id="considerations">Considerations<a class="headerlink" href="#considerations" title="Permanent link">#</a></h3>
+<p>Price is not the only consideration that goes into making a decision about whether to utilize S3 or a competing storage service. Performance, availability, user experience, support and legal compliance are other factors that will factor into the decision to utilize one service over another.</p>
+<h4 id="complexity">Complexity<a class="headerlink" href="#complexity" title="Permanent link">#</a></h4>
+<p>AWS had made it exceedingly easy for customer to utilize other AWS service in tandem. There is a non-trivial cost for an organization to decide to split their infrastructure over multiple service providers. Developers will need to learn and understand both systems and when to choose one design pattern over the other. There will be two sets of documentation that will need to be addressed when designing or troubleshooting systems.</p>
+<h4 id="use-cases">Use-cases<a class="headerlink" href="#use-cases" title="Permanent link">#</a></h4>
+<p>The primary use-case in favor of utilizing this cost efficiency architecture strategy is if a user has a large amount of static content that is stored on S3 and being served to end-users via the internet.</p>
 <p><br/></p>
 <div class="admonition contribute">
 <p class="admonition-title">Contribute</p>
 <p>Help us improve this page by making a contribution on our <a href="https://github.com/vantage-sh/handbook">Github repository</a>.</p>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:noegressfees">
+<p>"If you are using an AWS origin, effective December 1, 2014, data transferred from origin to edge locations (Amazon CloudFront "origin fetches") will be free of charge." https://aws.amazon.com/cloudfront/pricing/&#160;<a class="footnote-backref" href="#fnref:noegressfees" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
                 
                   
