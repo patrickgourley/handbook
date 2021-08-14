@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="http://handbook.vantage.sh/aws/services/elasticache-pricing/">
+        <link rel="canonical" href="http://handbook.vantage.sh/aws/concepts/autoscaling/">
       
       <link rel="shortcut icon" href="../../../assets/logo.svg">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
-        <title>ElastiCache Pricing | Cloud Cost Handbook - Cloud Cost Handbook</title>
+        <title>Autoscaling - Cloud Cost Handbook</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#summary" class="md-skip">
+        <a href="#application-autoscaling" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              ElastiCache Pricing | Cloud Cost Handbook
+              Autoscaling
             
           </span>
         </div>
@@ -212,14 +212,16 @@
       
 
 
+  
+
 
   
     
   
-  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       General Concepts
@@ -238,11 +240,59 @@
           
 
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../concepts/autoscaling/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Autoscaling
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Autoscaling
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#application-autoscaling" class="md-nav__link">
+    Application Autoscaling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autoscaling-strategies" class="md-nav__link">
+    Autoscaling Strategies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-considerations" class="md-nav__link">
+    Other Considerations
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -253,7 +303,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../concepts/credits/" class="md-nav__link">
+    <a href="../credits/" class="md-nav__link">
       Credits
     </a>
   </li>
@@ -266,7 +316,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../concepts/regions/" class="md-nav__link">
+    <a href="../regions/" class="md-nav__link">
       Regions
     </a>
   </li>
@@ -279,7 +329,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../concepts/reserved-instances/" class="md-nav__link">
+    <a href="../reserved-instances/" class="md-nav__link">
       Reserved Instances
     </a>
   </li>
@@ -292,7 +342,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../concepts/rightsizing/" class="md-nav__link">
+    <a href="../rightsizing/" class="md-nav__link">
       Rightsizing
     </a>
   </li>
@@ -305,7 +355,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../concepts/savings-plans/" class="md-nav__link">
+    <a href="../savings-plans/" class="md-nav__link">
       Savings Plans
     </a>
   </li>
@@ -318,7 +368,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../concepts/tags/" class="md-nav__link">
+    <a href="../tags/" class="md-nav__link">
       Tags
     </a>
   </li>
@@ -334,16 +384,14 @@
       
 
 
-  
-
 
   
     
   
-  <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--section md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
     
     <label class="md-nav__link" for="nav-3">
       AWS Services
@@ -364,7 +412,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cloudfront-pricing/" class="md-nav__link">
+    <a href="../../services/cloudfront-pricing/" class="md-nav__link">
       CloudFront
     </a>
   </li>
@@ -377,7 +425,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../cloudwatch-pricing/" class="md-nav__link">
+    <a href="../../services/cloudwatch-pricing/" class="md-nav__link">
       CloudWatch
     </a>
   </li>
@@ -390,7 +438,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../dynamodb-pricing/" class="md-nav__link">
+    <a href="../../services/dynamodb-pricing/" class="md-nav__link">
       DynamoDB
     </a>
   </li>
@@ -403,7 +451,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ebs-pricing/" class="md-nav__link">
+    <a href="../../services/ebs-pricing/" class="md-nav__link">
       EBS
     </a>
   </li>
@@ -416,7 +464,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ec2-pricing/" class="md-nav__link">
+    <a href="../../services/ec2-pricing/" class="md-nav__link">
       EC2
     </a>
   </li>
@@ -429,7 +477,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ec2-other-pricing/" class="md-nav__link">
+    <a href="../../services/ec2-other-pricing/" class="md-nav__link">
       EC2-Other
     </a>
   </li>
@@ -442,7 +490,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ecs-and-fargate-pricing/" class="md-nav__link">
+    <a href="../../services/ecs-and-fargate-pricing/" class="md-nav__link">
       ECS & Fargate
     </a>
   </li>
@@ -455,7 +503,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ecr-pricing/" class="md-nav__link">
+    <a href="../../services/ecr-pricing/" class="md-nav__link">
       ECR
     </a>
   </li>
@@ -468,7 +516,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../elb-pricing/" class="md-nav__link">
+    <a href="../../services/elb-pricing/" class="md-nav__link">
       ELB
     </a>
   </li>
@@ -479,66 +527,11 @@
           
 
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        ElastiCache
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../services/elasticache-pricing/" class="md-nav__link">
       ElastiCache
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pricing-dimensions" class="md-nav__link">
-    Pricing Dimensions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reserved-instances" class="md-nav__link">
-    Reserved Instances
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#savings-plans" class="md-nav__link">
-    Savings Plans
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -549,7 +542,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../elasticsearch-pricing/" class="md-nav__link">
+    <a href="../../services/elasticsearch-pricing/" class="md-nav__link">
       ElasticSearch
     </a>
   </li>
@@ -562,7 +555,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../lambda-pricing/" class="md-nav__link">
+    <a href="../../services/lambda-pricing/" class="md-nav__link">
       Lambda
     </a>
   </li>
@@ -575,7 +568,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../rds-pricing/" class="md-nav__link">
+    <a href="../../services/rds-pricing/" class="md-nav__link">
       RDS
     </a>
   </li>
@@ -588,7 +581,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../route-53-pricing/" class="md-nav__link">
+    <a href="../../services/route-53-pricing/" class="md-nav__link">
       Route 53
     </a>
   </li>
@@ -601,7 +594,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../s3-pricing/" class="md-nav__link">
+    <a href="../../services/s3-pricing/" class="md-nav__link">
       S3
     </a>
   </li>
@@ -614,7 +607,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../vpc-pricing/" class="md-nav__link">
+    <a href="../../services/vpc-pricing/" class="md-nav__link">
       VPC
     </a>
   </li>
@@ -627,7 +620,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../workspaces-pricing/" class="md-nav__link">
+    <a href="../../services/workspaces-pricing/" class="md-nav__link">
       WorkSpaces
     </a>
   </li>
@@ -661,29 +654,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
+  <a href="#application-autoscaling" class="md-nav__link">
+    Application Autoscaling
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pricing-dimensions" class="md-nav__link">
-    Pricing Dimensions
+  <a href="#autoscaling-strategies" class="md-nav__link">
+    Autoscaling Strategies
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reserved-instances" class="md-nav__link">
-    Reserved Instances
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#savings-plans" class="md-nav__link">
-    Savings Plans
+  <a href="#other-considerations" class="md-nav__link">
+    Other Considerations
   </a>
   
 </li>
@@ -700,43 +686,49 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/vantage-sh/handbook/edit/master/docs/aws/services/elasticache-pricing.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/vantage-sh/handbook/edit/master/docs/aws/concepts/autoscaling.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>ElastiCache</h1>
+                  <h1>Autoscaling</h1>
                 
-                <p><a class="md-button" href="https://aws.amazon.com/elasticache/pricing/">Amazon ElastiCache Pricing Page</a></p>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">#</a></h2>
-<p>Amazon ElastiCache allows you to set up, run, and scale popular open-source compatible in-memory data stores like Redis or Memcached. ElastiCache ultimately runs atop EC2 instances with pre-configured software and are prefixed with <code>"cache."</code> and are referred to as Nodes.</p>
-<h2 id="pricing-dimensions">Pricing Dimensions<a class="headerlink" href="#pricing-dimensions" title="Permanent link">#</a></h2>
-<table>
-<thead>
-<tr>
-<th>Dimension</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Node Usage</td>
-<td>You are charged for the amount of hours your ElastiCache nodes run.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="reserved-instances">Reserved Instances<a class="headerlink" href="#reserved-instances" title="Permanent link">#</a></h2>
-<p>ElastiCache Nodes do have Reserved Instances that can give you significant savings. Reserved Instances are covered as a general concept found <a href="../../concepts/reserved-instances/">here</a>. </p>
-<p>Typically, as ElastiCache nodes remain on for longer durations and aren't members of auto-scaling groups, they are good candidates for cost savings via Reserved Instances. </p>
-<h2 id="savings-plans">Savings Plans<a class="headerlink" href="#savings-plans" title="Permanent link">#</a></h2>
-<p>ElastiCache Nodes are <strong>not</strong> covered under AWS Savings Plans.</p>
-<p><br/></p>
+                <p>The best way to optimize costs in the cloud is to not spend it in the first place. Enter Autoscaling. Autoscaling leverages the elasticity of the cloud to dynamically provision and remove capacity based on demand. That means that as demands decrease autoscaling will automatically scale down resources and allow you to save on costs accordingly. </p>
+<p>Autoscaling applies to a variety a variety of different services, some of which are described in more detail below. If you're looking for EC2 autoscaling concepts, please see the AWS EC2 service page for the <a href="/aws/services/ec2-pricing/#autoscaling">autoscaling section</a>.</p>
+<h2 id="application-autoscaling">Application Autoscaling<a class="headerlink" href="#application-autoscaling" title="Permanent link">#</a></h2>
+<p>For other resources in AWS, <a href="https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html">Application Autoscaling</a> provides the ability to adjust provisioned resources.</p>
+<p>Application Autoscaling supports the following services:</p>
+<ul>
+<li>AppStream 2.0 fleets</li>
+<li>Aurora replicas</li>
+<li>Amazon Comprehend document classification and entity recognizer endpoints</li>
+<li><a href="/aws/services/dynamodb-pricing/">DynamoDB</a> tables and global secondary indexes</li>
+<li><a href="/aws/services/ecs-and-fargate-pricing/">Amazon Elastic Container Service (ECS)</a> services</li>
+<li>Amazon EMR clusters</li>
+<li>Amazon Keyspaces (for Apache Cassandra) tables</li>
+<li><a href="/aws/services/lambda-pricing/">Lambda</a> function provisioned concurrency</li>
+<li>Amazon Managed Streaming for Apache Kafka (MSK) broker storage</li>
+<li>SageMaker endpoint variants</li>
+</ul>
+<h2 id="autoscaling-strategies">Autoscaling Strategies<a class="headerlink" href="#autoscaling-strategies" title="Permanent link">#</a></h2>
+<p>There are various methods by which autoscaling can occur. These are listed below in no partiuclar order:</p>
+<ul>
+<li><strong>Target Scaling</strong> adds or removes capacity to keep a metric as near a specific value as possible. For example, target average CPU utilization of 50% across a set of ECS Tasks. If CPU utilization gets too high, add nodes. If CPU utilization gets too low, remove nodes.</li>
+<li><strong>Step Scaling</strong> will adjust capacity up and down by dynamic amounts, depending on the magnitude of a metric.</li>
+<li><strong>Scheduled Scaling</strong> will adjust mininmum and maximum capacity settings on a schedule.</li>
+<li><strong>Simple Scaling</strong> will add or remove EC2 instances from an Autoscalng Group when an alarm is in alert state.</li>
+<li><strong>Predictive Scaling</strong> can leverage historical metrics to preemptively scale EC2 workloads based on daily or weekly trends.</li>
+<li><strong>Manual Scaling</strong> is possible with EC2 instances if teams need to intervene with an autoscaling group. This allows you to manually adjust the autoscaling target without any automation. </li>
+</ul>
+<h2 id="other-considerations">Other Considerations<a class="headerlink" href="#other-considerations" title="Permanent link">#</a></h2>
+<p>Adding capacity is generally an easy process. For compute, it's just a matter of launching new workers from static images or automated standup processes.</p>
+<p>Reducing capacity can be tricky depending on the application. Web applications generally have their requests clean up to prepare for termination within 30 seconds. Load balancers are often used to drain requests off instances and then terminate the instances "cleanly". Queue/batch workers, on the other hand, need to be done with their work, or stash their work somewhere before the node can be terminated. Otherwise, requests and/or data can be lost or incomplete.</p>
+<p>DynamoDB Provisioned Capacity has <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html">restrictions</a> regarding how frequently it can be reduced (4 times per day at any time, plus any time when there hasn't been a reduction in the last hour). There are no restrictions regarding increasing capacity. Tables and Secondary Indexes are managed/scaled independently.</p>
+<p>Scaling cooldown can be the trickiest part of the process. It's generally best to aggressively scale up/out and conservatively scale down/in. A long cooldown process might be necessary when scaling out an application with a long startup process, but it can also block future scale out events, resulting in application instability. Scaling policies should be regularly evaluated and tuned.</p>
 <div class="admonition contribute">
 <p class="admonition-title">Contribute</p>
 <p>Help us improve this page by making a contribution on our <a href="https://github.com/vantage-sh/handbook">Github repository</a>.</p>
 </div>
-                
-                  
                 
               
               
@@ -755,7 +747,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../elb-pricing/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../.." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -764,19 +756,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                ELB
+                Overview
               </div>
             </div>
           </a>
         
         
-          <a href="../elasticsearch-pricing/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../credits/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                ElasticSearch
+                Credits
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
